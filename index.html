@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+    <form class="d-flex flex-column justify-content-center align-items-center" onsubmit="event.preventDefault();salvarFormulario();" autocomplete="off">
+        
+        <div class="text-center darken-grey-text mb-4">
+            <h5 class="font-bold mt-4 mb-3 card-heading">Registro</h5>
+        </div>
+
+        <div class="d-flex justify-content-center">
+                <div class="form-group">
+                    <label class="d-flex justify-content-start">Nome: </label>
+                    <input type="text" placeholder="Nome" class="form-control" id="nome">
+                    <label hidden id="validacaoNome" style="color: #FF0000">Campo Obrigatorio.</label>
+                </div>
+                <div class="form-group ms-3">
+                    <label class="d-flex justify-content-start">Idade: </label>
+                    <input type="text" placeholder="Idade" class="form-control" id="idade">
+                    <label hidden id="validacaoIdade" style="color: #FF0000">Campo Obrigatorio.</label>
+                </div>
+        </div>
+        <div class="form-action-buttons mt-3">
+            <button class="btn btn-primary mb-3" type="submit">Salvar</button>
+        </div>
+    </form>
+    <div>
+        <table class="sortable table table-striped table-hover table-bordered w-50 container justify-content-center" id="lista">
+            <thead>
+                <tr>
+                    <th id="nome" class="col-4 justify-content-center">Nome</th>
+                    <th class="numero col-1 justify-content-center" id="idade">Idade</th>
+                    <th class="col-4 justify-content-center">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
